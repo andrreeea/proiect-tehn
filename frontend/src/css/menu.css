@@ -1,0 +1,56 @@
+ .menu {
+    margin-bottom: 30px;
+    background-color: #f0f0f0;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adăugare umbră */
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+  }
+
+  button {
+    background-color: #67c06a;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+
+  form {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+
+  h1, h2, h3 {
+    color: #030303;
+    font-family: 'Tahoma', sans-serif;
+  }
+  
+  h1 {
+    font-size: 2em; 
+    margin-bottom: 10px;
+    text-align: center; 
+    text-transform: uppercase;
+  }
+  
+  h2 {
+    font-size: 1.5em; 
+    margin-bottom: 8px;
+  }
+  
+  h3 {
+    font-size: 1.2em; 
+    margin-bottom: 6px; 
+  }
+  
