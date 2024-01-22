@@ -1,0 +1,41 @@
+
+INSERT INTO Utilizator (UserName, UserSurName, Type, UserPhone, UserEmail,Password) 
+VALUES ('John', 'Doe', 'Student', '123456789', 'john.doe@example.com','johndoe');
+
+INSERT INTO Utilizator (UserName, UserSurName, Type, UserPhone, UserEmail,Password) 
+VALUES ('Alice', 'Smith', 'Profesor', '987654321', 'alice.smith@gmail.com','alicesmith');
+
+INSERT INTO Utilizator (UserName, UserSurName, Type, UserPhone, UserEmail,Password) 
+VALUES ('Bob', 'Johnson', 'Student', '555111222', 'bob.johnson@gmail.com','bobjohnson');
+
+INSERT INTO Utilizator (UserName, UserSurName, Type, UserPhone, UserEmail,Password) 
+VALUES ('Eva', 'Brown', 'Student', '444333222', 'eva.brown@gmail.com','evabrown');
+
+INSERT INTO Utilizator (UserName, UserSurName, Type, UserPhone, UserEmail,Password) 
+VALUES ('Chris', 'Miller', 'Profesor', '111222333', 'chris.miller@gmail.com','chrismiller');
+
+INSERT INTO Utilizator (UserName, UserSurName, Type, UserPhone, UserEmail,Password) 
+VALUES ('Matt', 'Cristian', 'Profesor', '45125785', 'matt.cristian@gmail.com','mattcristian');
+
+-- Cerere 1
+INSERT INTO CerereDisertatie (Detail, Stare,Profesor,Specializare, UserId) 
+VALUES ('Cerere de disertatie 1', 'In curs de procesare','Alice Smith','CSIE', 1);
+
+-- Cerere 2
+INSERT INTO CerereDisertatie (Detail, Stare,Profesor,Specializare, UserId) 
+VALUES ('Cerere de disertatie 2', 'In asteptare','Chris Miller','MRK', 2);
+
+-- Cerere 3
+INSERT INTO CerereDisertatie (Detail, Stare,Profesor,Specializare, UserId) 
+VALUES ('Cerere de disertatie 3', 'Respinsa','Alice Smith','CSIE', 3);
+
+-- Cerere 4
+INSERT INTO CerereDisertatie (Detail, Stare,Profesor,Specializare, UserId) 
+VALUES ('Cerere de disertatie 4', 'In curs de procesare','Matt Cristian','CIG', 4);
+
+-- Cerere 5
+INSERT INTO CerereDisertatie (Dutilizatoretail, Stare,Profesor,Specializare, UserId) 
+VALUES ('Cerere de disertatie 5', 'Acceptata','Chris Miller', 'MRK', 5);
+
+SELECT * FROM utilizator;
+SELECT *FROM cereredisertatie;
