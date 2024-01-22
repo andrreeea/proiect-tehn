@@ -18,28 +18,11 @@ cereriRouter.route('/cereredisertatie').get(async (req, res) => {
     }
   });
   
-  
 
-// cereriRouter.route('/cereredisertatie').post(async (req, res) => {
-//     try {
-//       // console.log("Cerere in curs de trimitere...");
-//         const cerere = req.body; // Datele trimise din frontend
-//         const createdCerere = await createCerere(cerere); // Funcția care adaugă cererea în baza de date
-//         res.status(201).json(createdCerere);
-//      }// catch (error) {
-//     //     console.error(error);
-//     //     res.status(500).json({ error: 'Eroare la adăugarea cererii.' });
-//     // }
-//     catch (error) {
-//       console.error('Eroare în gestionarea cererii POST:', error);
-//       res.status(500).json({ error: 'Eroare internă a serverului.' });
-//     }
-// });
-  // ...
 
 cereriRouter.route('/cereredisertatie').post(async (req, res) => {
   try {
-    const cerere = req.body; // Datele trimise din frontend
+    const cerere = req.body; 
     const createdCerere = await createCerere(cerere); // Funcția care adaugă cererea în baza de date
     res.status(201).json(createdCerere);
   } catch (error) {
@@ -63,12 +46,12 @@ cereriRouter.route('/cereredisertatie/:id').delete( async (req, res) => {
 })
 
 
-//MERGE-LEGTURA CU UPDATE IN CERERIDATA
+
 cereriRouter.route('/cereredisertatie/:id').put(async (req, res) => {
   try {
     const id = parseInt(req.params.id);
-    const updatedCerere = req.body; // Datele trimise din frontend pentru actualizare
-    const result = await updateCerere(id, updatedCerere); // Funcția care actualizează cererea în baza de date
+    const updatedCerere = req.body; 
+    const result = await updateCerere(id, updatedCerere); 
     res.json(result);
   } catch (error) {
     console.error('Eroare în gestionarea cererii PUT:', error);

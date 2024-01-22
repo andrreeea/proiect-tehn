@@ -111,10 +111,10 @@ async function checkUserCredentials(UserEmail: string, Password: string) {
         UserEmail: UserEmail,
         Password: Password,
       },
-      raw: true, // Adaugă această opțiune pentru a obține rezultate în format raw (fără a fi obiecte Sequelize)
+      raw: true, 
     });
 
-    // În loc să returnezi doar true/false, poți returna utilizatorul sau null pentru a avea acces la tipul de utilizator
+   
     return user || null;
   } catch (error) {
     console.error('Eroare la verificarea credențialelor:', error);

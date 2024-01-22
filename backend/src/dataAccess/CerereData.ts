@@ -38,13 +38,12 @@ async function getCerereById(id: number) {
 
 
 
-  //MERGEEEE- LEGATURA CU CERERIROUTE
   async function updateCerere(id: number, updatedCerere: CerereDisertatieCreationAttributes) {
     const existingCerere = await CerereDisertatie.findByPk(id);
   
     if (!existingCerere) {
       console.log("This element does not exist, so it cannot be updated");
-      return null; // sau aruncarea unei excepții, dacă doriți să gestionați asta diferit
+      return null; 
     }
     await existingCerere.update(updatedCerere);
       return existingCerere;
@@ -55,7 +54,6 @@ async function getCerereById(id: number) {
 
   async function getToateCererile() {
     try {
-      // Obține toate cererile din baza de date folosind modelul definit
       const toateCererile = await CerereDisertatie.findAll();
       return toateCererile;
     } catch (error:any) {
@@ -63,17 +61,7 @@ async function getCerereById(id: number) {
       throw error;
     }
   }
-  // async function getCerereByProfesor(profesor: string): Promise<CerereDisertatieAttributes[]> {
-  //   try {
-  //     const toateCererile = await getToateCererile();
-  //     const cereriProfesor: CerereDisertatieAttributes[] = toateCererile.map(modelInstance => modelInstance.get()) // Conversia de la Model la obiect JSON
-  //       .filter(cerere => cerere.Profesor === profesor);
-  //     return cereriProfesor;
-  //   } catch (error:any) {
-  //     console.error('Eroare la obținerea cererilor de disertație:', error.message);
-  //     throw error;
-  //   }
-  // }
+ 
   
   const getCerereByProfesor = async (profesor: string) => {
     return await CerereDisertatie.findAll({
